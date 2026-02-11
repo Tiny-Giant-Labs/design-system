@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap")
+layer(base);
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, sans-serif;
+  --color-primary: #335cff;
+}
+
+/* Tippy.js custom theme for Dropdown */
+.tippy-box[data-theme~="transparent"] {
+  background-color: transparent;
+  z-index: 10001;
+}
+.tippy-box[data-theme~="transparent"] .tippy-content {
+  padding: 0;
+  color: var(--color-strong-950);
+}
+
+/* Tippy.js custom theme for Tooltip */
+.tippy-box[data-theme~="custom-tooltip"] {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.tippy-box[data-theme~="custom-tooltip"] .tippy-content {
+  padding: 0;
+}
+
+/* DateRangePicker overrides */
+:root {
+  --dp-font-family: "Inter";
+  --dp-action-button-height: 2rem;
+  --dp-action-buttons-padding: 0;
+  --dp-font-size: 0.9rem;
+  --dp-border-radius: 8px;
+}
+
+.dp__theme_light {
+  --dp-primary-color: var(--color-primary);
+  --dp-hover-color: var(--color-weak-50);
+  --dp-border-color: var(--color-soft-200);
+}
+
+.dp--preset-dates {
+  padding: 12px !important;
+}
+
+.dp__selection_preview {
+  display: none !important;
+}
+
+.dp__overlay_action {
+  display: none !important;
+}
+
+.dp__overlay_row {
+  flex: 0 !important;
+  padding: 0 8px !important;
+}
+
+.dp__arrow_top {
+  display: none !important;
+}
+
+/* Modal transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Hide number input arrows (spinners) */
+@layer base {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
