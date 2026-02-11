@@ -8,16 +8,6 @@ layer(base);
   --color-primary: #335cff;
 }
 
-/* Tippy.js custom theme for Dropdown */
-.tippy-box[data-theme~="transparent"] {
-  background-color: transparent;
-  z-index: 10001;
-}
-.tippy-box[data-theme~="transparent"] .tippy-content {
-  padding: 0;
-  color: var(--color-strong-950);
-}
-
 /* Tippy.js custom theme for Tooltip */
 .tippy-box[data-theme~="custom-tooltip"] {
   background-color: white;
