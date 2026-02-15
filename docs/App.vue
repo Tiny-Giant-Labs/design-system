@@ -172,9 +172,8 @@ const ssOptions = [
     <aside class="docs-sidebar">
       <div class="sidebar-header">
         <div class="sidebar-logo">
-          <div class="sidebar-logo-icon">P</div>
           <div>
-            <div class="sidebar-title">Priscope</div>
+            <div class="sidebar-title">TinyGiant</div>
             <div class="sidebar-subtitle">Design System</div>
           </div>
         </div>
