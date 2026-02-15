@@ -3,9 +3,13 @@ layer(base);
 
 @import "tailwindcss";
 
+@source "./components";
+@source "../docs";
+
 @theme {
   --font-sans: Inter, sans-serif;
   --color-primary: #335cff;
+  --color-content-emphasis: #1f2937;
 }
 
 /* Tippy.js custom theme for Tooltip */
