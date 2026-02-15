@@ -535,7 +535,7 @@ const ssOptions = [
             <input
               v-model="pvPassword"
               placeholder="Type a password..."
-              class="block w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm mb-3"
+              class="block w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 mb-3"
             />
             <PasswordValidation
               :password="pvPassword"

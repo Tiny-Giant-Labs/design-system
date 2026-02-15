@@ -85,7 +85,7 @@ const selectOption = (option: T) => {
       <template #trigger>
         <button
           type="button"
-          class="relative w-full cursor-default rounded-md border border-neutral-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm transition-colors hover:border-neutral-400"
+          class="relative w-full cursor-default rounded-md border border-neutral-300 bg-white py-2 pl-3 pr-10 text-left text-neutral-900 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm transition-colors hover:border-neutral-400"
           :class="{
             'border-red-300 focus:border-red-500 focus:ring-red-500': error,
           }"

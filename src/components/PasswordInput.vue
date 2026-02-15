@@ -1,39 +1,41 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { EyeIcon, EyeSlashIcon } from '@heroicons/vue/20/solid'
-import { useRouter } from 'vue-router'
+import { ref } from "vue";
+import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/20/solid";
+import { useRouter } from "vue-router";
 
 interface Props {
-  label: string
-  placeholder: string
-  id: string
-  error?: string
-  displayForgotPassword?: boolean
+  label: string;
+  placeholder: string;
+  id: string;
+  error?: string;
+  displayForgotPassword?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
   displayForgotPassword: false,
-})
+});
 
-const router = useRouter()
+const router = useRouter();
 
-const model = defineModel<string>()
+const model = defineModel<string>();
 
-const isPasswordVisible = ref(false)
+const isPasswordVisible = ref(false);
 
 const toggleVisibility = () => {
-  isPasswordVisible.value = !isPasswordVisible.value
-}
+  isPasswordVisible.value = !isPasswordVisible.value;
+};
 
 const goToForgotPassword = () => {
-  router.push({ name: '/(auth)/forgot-password' })
-}
+  router.push({ name: "/(auth)/forgot-password" });
+};
 </script>
 
 <template>
   <label>
     <div class="flex items-center justify-between mb-2">
-      <span class="text-content-emphasis block text-sm font-medium leading-none">
+      <span
+        class="text-content-emphasis block text-sm font-medium leading-none"
+      >
         {{ label }}
       </span>
 
@@ -52,7 +54,7 @@ const goToForgotPassword = () => {
           v-model="model"
           :id="id"
           :placeholder="placeholder"
-          class="block w-full min-w-0 appearance-none rounded-md border border-neutral-300 bg-white px-3 py-2 pr-10 text-sm placeholder-neutral-400 shadow-sm transition-colors focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary hover:border-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+          class="block w-full min-w-0 appearance-none rounded-md border border-neutral-300 bg-white px-3 py-2 pr-10 text-sm text-neutral-900 placeholder-neutral-400 shadow-sm transition-colors focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary hover:border-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
           :type="isPasswordVisible ? 'text' : 'password'"
         />
 
@@ -69,7 +71,9 @@ const goToForgotPassword = () => {
         </button>
       </div>
 
-      <span v-if="error" class="text-red-600 text-[10px] opacity-90">{{ error }}</span>
+      <span v-if="error" class="text-red-600 text-[10px] opacity-90">{{
+        error
+      }}</span>
     </div>
   </label>
 </template>
